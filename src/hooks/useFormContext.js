@@ -6,6 +6,7 @@ export function FormProvider({ children }) {
   const [formData, setFormData] = useState({});
 
   function updateForm(inputName, eventValue) {
+    console.log(formData);
     setFormData({ ...formData, [inputName]: eventValue });
   }
 
