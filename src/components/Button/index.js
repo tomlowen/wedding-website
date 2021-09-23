@@ -5,8 +5,7 @@ function Button() {
   const { formData, handleFormSubmit } = useFormContext();
   return (
     <>
-      <label>Button Label</label>
-      <button onClick={() => handleFormSubmit(formData)}>Send response</button>
+      <button onClick={() => handleFormSubmit(formData)}>RSVP!</button>
     </>
   );
 }
