@@ -1,5 +1,5 @@
-import React from "react"
-import SEO from "../../../../gatsby-starter-tailwind-css/src/components/SEO"
+import React from "react";
+import SEO from "../../../../gatsby-starter-tailwind-css/src/components/SEO";
 
 const Layout = ({ children }) => {
   return (
@@ -10,12 +10,9 @@ const Layout = ({ children }) => {
           <h1 className="max-w-4xl mx-auto">gatsby-starter-tailwind-css</h1>
         </header>
         {children}
-        <footer className="py-2 text-center text-gray-600 text-xs">
-          &copy; Melanie Nolan 2020
-        </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

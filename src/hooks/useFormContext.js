@@ -3,20 +3,30 @@ import React, { useState, useContext, createContext, useEffect } from "react";
 const FormContext = createContext();
 
 export function FormProvider({ children }) {
+  const partyUuid = window.location.search.slice(6);
+
   useEffect(() => {
     async function getInitialFormData() {
-      const res = await fetch("https");
-      const data = res.json();
-      setFormData(data);
+      const res = await fetch(
+        `https://lowen-wedding-db.herokuapp.com/guests?uuid=${partyUuid}`
+      );
+      const data = await res.json();
+      setFormData(data.payload);
     }
     getInitialFormData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [formData, setFormData] = useState([]);
 
-  function updateForm(inputName, eventValue) {
-    console.log(formData);
-    setFormData({ ...formData, [inputName]: eventValue });
+  function updateForm(inputName, eventValue, guestUuid) {
+    const newFormData = formData.map((guest) => {
+      if (guest.uuid === guestUuid) {
+        return { ...guest, [inputName]: eventValue };
+      }
+      return guest;
+    });
+    setFormData(newFormData);
   }
 
   function handleFormSubmit(payload) {

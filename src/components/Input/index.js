@@ -1,15 +1,29 @@
 import { useFormContext } from "../../hooks/useFormContext";
 
-function Input({ inputName, placeholder, type, labelText }) {
+function Input({
+  inputName,
+  placeholder,
+  type,
+  labelText,
+  value,
+  guestUuid,
+  spanClass,
+  inputClass,
+}) {
   const { updateForm } = useFormContext();
   return (
     <>
-      <label>{labelText}</label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        onChange={(e) => updateForm(inputName, e.target.value)}
-      />
+      <label>
+        {labelText}
+        <input
+          className={inputClass}
+          type={type}
+          placeholder={placeholder}
+          onChange={(e) => updateForm(inputName, e.target.value, guestUuid)}
+          value={value}
+        />
+        <span className={spanClass}></span>
+      </label>
     </>
   );
 }
