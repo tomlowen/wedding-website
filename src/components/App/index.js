@@ -43,7 +43,7 @@ function App() {
           </div>
         </Router>
         <div className="content">
-          <h3 id="hello">Hat is Lorem Ipsum?</h3>
+          <h3 id="hello">Hello</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -55,7 +55,7 @@ function App() {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-          <h3 id="about"> Why do we use it?</h3>
+          <h3 id="about">Details</h3>
           <p>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
@@ -68,7 +68,7 @@ function App() {
             years, sometimes by accident, sometimes on purpose (injected humour
             and the like).
           </p>
-          <h3 id="users">Where does it come from?</h3>
+          <h3 id="users">Venue</h3>
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
