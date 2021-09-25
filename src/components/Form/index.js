@@ -8,7 +8,7 @@ const Form = () => {
   const { formData } = useFormContext();
   console.log(formData);
   return (
-    <div className="form">
+    <div id="rsvpform" className="form">
       <h2>Please let us know who's coming</h2>
       {formData.map((guest, i) => {
         return <GuestSection guest={guest} key={i} />;
