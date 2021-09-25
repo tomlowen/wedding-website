@@ -7,6 +7,65 @@
   --font-size: 14pt;
   --font-face: "Fjalla One";
   --font-color: #2a293e;
+  --colour-3: #01031d;
+}
+
+body {
+  margin: 0;
+  background: var(--form-bg);
+}
+
+.navbar {
+  background-color: var(--colour-3);
+  height: 10vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font: white;
+  letter-spacing: 3px;
+  text-decoration: inherit;
+}
+
+.navLink {
+  padding: 10px 20px;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  color: white;
+  text-decoration: inherit;
+}
+
+.rsvpButton {
+  background: var(--form-shadow);
+  transition: 0.2s all ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 1);
+  box-shadow: 3px 3px 1px var(--form-primary-highlight),
+    3px 3px 1px 1px rgba(0, 0, 0, 1);
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.content {
+  font-size: 4vw;
+  width: 80%;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headline-photo {
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 .form {
