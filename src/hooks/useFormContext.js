@@ -1,9 +1,18 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState, useContext, createContext, useEffect } from "react";
 
 const FormContext = createContext();
 
 export function FormProvider({ children }) {
-  const [formData, setFormData] = useState({});
+  useEffect(() => {
+    async function getInitialFormData() {
+      const res = await fetch("https");
+      const data = res.json();
+      setFormData(data);
+    }
+    getInitialFormData();
+  }, []);
+
+  const [formData, setFormData] = useState([]);
 
   function updateForm(inputName, eventValue) {
     console.log(formData);

@@ -4,6 +4,7 @@ import "./App.css";
 import heroImage from "../../images/hero-image.svg";
 
 function App() {
+
   return (
     <div className="App">
       <img
