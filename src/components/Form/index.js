@@ -17,13 +17,15 @@ const Form = () => {
         type="email"
         placeholder="How can we reach you all?"
         labelText="Email"
-        inputName={"email"}
+        inputName={"emailaddress"}
+        guestUuid={"Apply_to_all"}
       />
       <Input
         type="text"
         placeholder=""
         labelText="Please tell us what you want to dance to"
-        inputName={"songChoice"}
+        inputName={"songrequest"}
+        guestUuid={"Apply_to_all"}
       />
       <Button />
     </div>

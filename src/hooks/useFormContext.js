@@ -21,7 +21,7 @@ export function FormProvider({ children }) {
 
   function updateForm(inputName, eventValue, guestUuid) {
     const newFormData = formData.map((guest) => {
-      if (guest.uuid === guestUuid) {
+      if (guest.uuid === guestUuid || guestUuid === "Apply_to_all") {
         return { ...guest, [inputName]: eventValue };
       }
       return guest;

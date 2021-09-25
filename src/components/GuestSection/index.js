@@ -1,8 +1,8 @@
 import Input from "../Input";
 
 function GuestSection(guest) {
-  const { name, diet, uuid, confirmedAttendance } = guest.guest;
-  console.log(confirmedAttendance);
+  const { name, diet, uuid, confirmedattendance } = guest.guest;
+  console.log(confirmedattendance);
   return (
     <>
       <div className="guestSection">
@@ -17,8 +17,8 @@ function GuestSection(guest) {
           />
           <Input
             type="checkbox"
-            inputName={"confirmedAttendance"}
-            value={confirmedAttendance}
+            inputName={"confirmedattendance"}
+            value={confirmedattendance}
             guestUuid={uuid}
           />
           <div className="dietaryRequirements">

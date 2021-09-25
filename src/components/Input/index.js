@@ -19,7 +19,13 @@ function Input({
           className={inputClass}
           type={type}
           placeholder={placeholder}
-          onChange={(e) => updateForm(inputName, e.target.value, guestUuid)}
+          onChange={(e) =>
+            updateForm(
+              inputName,
+              type === "checkbox" ? e.target.checked : e.target.value,
+              guestUuid
+            )
+          }
           value={value}
         />
         <span className={spanClass}></span>
