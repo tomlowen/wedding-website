@@ -7,11 +7,15 @@ export function FormProvider({ children }) {
 
   useEffect(() => {
     async function getInitialFormData() {
-      const res = await fetch(
-        `https://lowen-wedding-db.herokuapp.com/guests?uuid=${partyUuid}`
-      );
-      const data = await res.json();
-      setFormData(data.payload);
+      try {
+        const res = await fetch(
+          `https://lowen-wedding-db.herokuapp.com/guests?uuid=${partyUuid}`
+        );
+        const data = await res.json();
+        setFormData(data.payload);
+      } catch (error) {
+        console.error(error);
+      }
     }
     getInitialFormData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
