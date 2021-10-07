@@ -2,10 +2,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        garamond: ["Garamond", "serif"],
+      },
+    },
+    variants: {
+      extend: {},
+    },
+    plugins: [],
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
+};

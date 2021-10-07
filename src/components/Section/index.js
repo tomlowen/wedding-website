@@ -1,8 +1,10 @@
 function Section({ title, content, id }) {
   return (
-    <section>
-      <h3 id={id}>{title}</h3>
-      <p>{content}</p>
+    <section className="">
+      <h3 id={id} className="font-garamond">
+        {title}
+      </h3>
+      <p className="font-garamond p-3">{content}</p>
     </section>
   );
 }

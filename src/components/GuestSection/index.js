@@ -6,8 +6,11 @@ function GuestSection(guest) {
   return (
     <>
       <div className="guestSection">
-        <div className="namersvp">
+        <div>
           <Input
+            inputClass={
+              "bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            }
             type="text"
             placeholder="Who are you?"
             labelText=""
@@ -17,6 +20,7 @@ function GuestSection(guest) {
           />
           <Input
             type="checkbox"
+            inputClass={"checkbox"}
             inputName={"confirmedattendance"}
             value={confirmedattendance}
             guestUuid={uuid}
