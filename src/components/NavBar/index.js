@@ -1,6 +1,7 @@
 import { HashLink } from "react-router-hash-link";
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function NavBar({ content }) {
   const [navBarVisible, setNavBarVisible] = useState(false);
