@@ -6,6 +6,8 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { ControlledCarousel } from "../Carousel";
 
+//AWS redploy test
+
 function App() {
   return (
     <>
@@ -91,7 +93,7 @@ function App() {
           </p>
           <h3>Where can I get some?</h3>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but
+            AWS. There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don't look even slightly
             believable. If you are going to use a passage of Lorem Ipsum, you
