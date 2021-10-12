@@ -5,7 +5,7 @@ export function ControlledCarousel() {
   return (
     <div className="w-screen">
       <img
-        className="min-w-full absolute z-0 top-20 "
+        className="min-w-full absolute z-20 top-20 "
         src={image1}
         alt="Tom and Frankie in 2010"
       />
