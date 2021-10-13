@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import image1 from "../../images/1.png";
-import image2 from "../../images/2.png";
+import image2 from "../../images/2021.png";
 
 export function ControlledCarousel() {
   return (
@@ -21,21 +21,23 @@ export function ControlledCarousel() {
           alt="Tom and Frankie in 2021"
         />
       </div>
-      <div className="w-screen h-screen p-8 absolute z-20 font-bookman text-8xl font-bold text-center text-pink-700">
-        <motion.p
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
-          transition={{ duration: 1.5, delay: 2.7 }}
-        >
-          After 12 years...
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 3.7 }}
-        >
-          We're getting married!
-        </motion.p>
+      <div className="h-screen w-screen flex place-items-end p-5 ">
+        <div className="flex max-w-3xl bottom-10 z-20 font-bookman text-7xl font-bold text-center text-pink-700">
+          <motion.p
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            transition={{ duration: 1.5, delay: 2.7 }}
+          >
+            After 12 years...
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 3.7 }}
+          >
+            We're getting married!
+          </motion.p>
+        </div>
       </div>
     </div>
   );

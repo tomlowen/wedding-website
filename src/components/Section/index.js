@@ -16,7 +16,7 @@ function Section({ title, content, id, index, image }) {
         >
           <div className="w-2/3">
             <h3 className={`text-5xl pb-20`}>{title}</h3>
-            <p>{content}</p>
+            {<p className="text-xl">{content}</p>}
           </div>
           <img src={src} alt={alt} className={className} />
         </div>
