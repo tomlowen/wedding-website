@@ -6,6 +6,23 @@ import { motion } from "framer-motion";
 function NavBar({ content }) {
   const [navBarVisible, setNavBarVisible] = useState(false);
 
+  const variants = {
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: "easeIn",
+      },
+    },
+    closed: {
+      opacity: 1,
+      x: "-100%",
+      transition: {
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <Router>
       <div className="sticky top-0 z-40">
@@ -50,11 +67,11 @@ function NavBar({ content }) {
             </ul>
           </div>
         </nav>
-        <div
+        <motion.div
+          animate={navBarVisible ? "open" : "closed"}
+          variants={variants}
           onClick={() => setNavBarVisible(!navBarVisible)}
-          className={`${
-            navBarVisible ? "visible" : "hidden"
-          } flex justify-between bg-gray-700 text-white min-h-screen w-9/12 max-w-xs`}
+          className={` flex justify-between bg-gray-700 text-white min-h-screen w-9/12 max-w-xs`}
         >
           <div className="px-5 xl:px-12 py-10">
             <ul className="flex-col px-4 font-semibold font-heading space-y-5">
@@ -72,7 +89,7 @@ function NavBar({ content }) {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Router>
   );
