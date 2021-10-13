@@ -20,6 +20,7 @@ function App() {
               id={section.title}
               title={section.title}
               content={section.content}
+              image={section.image}
             />
           ))}
         </div>

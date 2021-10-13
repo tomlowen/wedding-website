@@ -1,6 +1,6 @@
-import image from "../../images/curtain-fall.png";
-
-function Section({ title, content, id, index }) {
+function Section({ title, content, id, index, image }) {
+  const { src, alt, className } = image;
+  console.log(alt);
   return (
     <section
       id={id}
@@ -11,18 +11,14 @@ function Section({ title, content, id, index }) {
       <div className="pt-20 pb-20 max-w-screen-lg">
         <div
           className={`${
-            index % 2 === 0 ? "" : "flex-row-reverse"
-          } flex justify-between`}
+            index % 2 === 0 ? "" : "md:flex-row-reverse"
+          } md:flex justify-between`}
         >
           <div className="w-2/3">
             <h3 className={`text-5xl pb-20`}>{title}</h3>
             <p>{content}</p>
           </div>
-          <img
-            src={image}
-            alt={"another one of Franks and Tom"}
-            className="m-10 mt-20 max-h-56 rounded-full"
-          />
+          <img src={src} alt={alt} className={className} />
         </div>
       </div>
     </section>
