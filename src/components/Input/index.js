@@ -7,30 +7,26 @@ function Input({
   labelText,
   value,
   guestUuid,
-  spanClass,
   inputClass,
 }) {
   const { updateForm } = useFormContext();
   return (
-    <>
-      <label>
-        {labelText}
-        <input
-          className={inputClass}
-          type={type}
-          placeholder={placeholder}
-          onChange={(e) =>
-            updateForm(
-              inputName,
-              type === "checkbox" ? e.target.checked : e.target.value,
-              guestUuid
-            )
-          }
-          value={value}
-        />
-        <span className={spanClass}></span>
-      </label>
-    </>
+    <div>
+      <label>{labelText}</label>
+      <input
+        className={inputClass}
+        type={type}
+        placeholder={placeholder}
+        onChange={(e) =>
+          updateForm(
+            inputName,
+            type === "checkbox" ? e.target.checked : e.target.value,
+            guestUuid
+          )
+        }
+        value={value}
+      />
+    </div>
   );
 }
 export default Input;

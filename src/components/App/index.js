@@ -14,8 +14,9 @@ function App() {
         <NavBar content={content} />
         <ControlledCarousel />
         <div className="content">
-          {content.map((section) => (
+          {content.map((section, index) => (
             <Section
+              index={index}
               id={section.title}
               title={section.title}
               content={section.content}
