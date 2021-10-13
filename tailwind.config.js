@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        garamond: ["Garamond", "serif"],
+        bookman: ["Bookman", "serif"],
       },
       padding: {
         "1/3": "33.33333%",

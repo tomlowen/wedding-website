@@ -21,19 +21,18 @@ export function ControlledCarousel() {
           alt="Tom and Frankie in 2021"
         />
       </div>
-      <div className="p-8 flex absolute z-30 font-garamond text-8xl font-bold text-center text-gray-900">
+      <div className="w-screen h-screen p-8 absolute z-30 font-bookman text-8xl font-bold text-center text-pink-700">
         <motion.p
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 1.5, delay: 3 }}
+          transition={{ duration: 1.5, delay: 2.7 }}
         >
           After 12 years...
         </motion.p>
         <motion.p
-          className="self-end"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 3 }}
+          transition={{ duration: 1.5, delay: 3.7 }}
         >
           We're getting married!
         </motion.p>

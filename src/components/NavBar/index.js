@@ -15,7 +15,7 @@ function NavBar({ content }) {
       },
     },
     closed: {
-      opacity: 1,
+      opacity: 0.85,
       x: "-100%",
       transition: {
         ease: "easeOut",
