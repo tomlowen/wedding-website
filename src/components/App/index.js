@@ -11,7 +11,7 @@ import curtainFall from "../../images/curtain-fall.png";
 import fazeley from "../../images/Fazeley-Studios.png";
 import bristol from "../../images/Bristol.png";
 
-const paraTitles = [
+const sections = [
   "Finally...",
   "Plan for the day",
   "Getting here",
@@ -26,10 +26,10 @@ function App() {
   return (
     <>
       <div className="App">
-        <NavBar paraTitles={paraTitles} />
+        <NavBar paraTitles={sections} />
         <ControlledCarousel />
         <div className="content">
-          {paraTitles.map((title, index) => (
+          {sections.map((title, index) => (
             <Section index={index} title={title}>
               {index === 0 && (
                 <div
@@ -63,12 +63,12 @@ function App() {
                 >
                   <div className="w-2/3">
                     <h3 className={`text-5xl pb-20`}>{title}</h3>
-                    <p className="text-xl">
+                    <p className="text-xl pb-5">
                       3pm: Everyone arrives, drinks, ceremony, and a chance to
                       explore Digbeth
                     </p>
-                    <p className="text-xl">6pm: We eat!</p>
-                    <p className="text-xl">9pm: We dance!</p>
+                    <p className="text-xl pb-5">6pm: We eat!</p>
+                    <p className="text-xl pb-5">9pm: We dance!</p>
                     <p className="text-xl">1am: End of the night</p>
                   </div>
                   <img
@@ -84,23 +84,32 @@ function App() {
                     index
                   )} md:flex justify-between`}
                 >
-                  <div className="w-2/3">
+                  <div className="w-1/2">
                     <h3 className={`text-5xl pb-20`}>{title}</h3>
-                    <p className="text-xl">
-                      The address of the venue is:\r\n\r\n191 Fazeley Street
-                      Digbeth\nBirmingham\nB5 5SE Congestion charge: The venue
-                      is within Birmingham's Clean Air Zone so you may be
-                      charged if you are arriving by car. Please check here to
-                      see if you will be charged and see coverage of the Clean
-                      Air Zone. parking: if you do want to drive here, there is
-                      plenty of parking. Taxis: Uber, Lyft
+                    <p className="text-xl">The address of the venue is:</p>
+                    <p>191 Fazeley Street, Digbeth, Birmingham, B5 5SE</p>
+                    <p>
+                      The venue is within Birmingham's Clean Air Zone so you may
+                      be charged if you are arriving by car. Please check here
+                      to see if you will be charged and see coverage of the
+                      Clean Air Zone.
                     </p>
+                    <p>
+                      parking: if you do want to drive here, there is plenty of
+                      parking.
+                    </p>
+                    <p>Taxis: Uber, Lyft</p>
+                    <p></p>
                   </div>
-                  <img
-                    src=""
-                    alt="map"
-                    className="m-10 mt-20 max-h-56 rounded-3xl"
-                  />
+                  <iframe
+                    title="fazeleyStudios"
+                    width="600"
+                    height="450"
+                    className="border-0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"
+                  ></iframe>
                 </div>
               )}
               {index === 3 && (
