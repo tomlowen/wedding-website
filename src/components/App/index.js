@@ -122,7 +122,7 @@ function App() {
                     index
                   )} md:flex justify-between`}
                 >
-                  <div className="md:w-1/2 text-xl">
+                  <div className="md:w-1/2 text-xl md:pr-10">
                     <h3 className={`text-5xl pb-20`}>{title}</h3>
                     <p className="pb-2">The address of the venue is:</p>
                     <p>191 Fazeley Street</p>
@@ -154,7 +154,7 @@ function App() {
                   </div>
                   <iframe
                     title="fazeleyStudios"
-                    className="w-full md:w-1/2 mt-10"
+                    className="w-full md:w-1/2 mt-10 pt-10 md:h-500"
                     loading="lazy"
                     allowfullscreen
                     src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"

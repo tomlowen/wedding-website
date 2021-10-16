@@ -20,10 +20,10 @@ export const Form = () => {
           labelText="Email"
           inputName={"emailaddress"}
           guestUuid={"Apply_to_all"}
-          value={formData.guest}
+          value={formData[0].emailaddress}
           inputClass={
-              "bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-600"
-            }
+            "bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-600"
+          }
         />
         <Input
           type="text"
@@ -32,8 +32,8 @@ export const Form = () => {
           inputName={"songrequest"}
           guestUuid={"Apply_to_all"}
           inputClass={
-              "bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-600"
-            }
+            "bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-600"
+          }
         />
         <Button />
       </div>
