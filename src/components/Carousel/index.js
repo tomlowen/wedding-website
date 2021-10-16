@@ -22,7 +22,7 @@ export function ControlledCarousel() {
         />
       </div>
       <div className="h-screen max-w-screen flex place-items-center p-5 ">
-        <div className="flex max-w-3xl z-20 font-bookman text-7xl font-bold text-center text-pink-700 transform translate-y-16">
+        <div className="flex max-w-3xl z-20 font-bookman text-7xl font-bold text-center text-pink-700 transform translate-y-12">
           <motion.p
             className="max-w-screen"
             initial={{ opacity: 1 }}
