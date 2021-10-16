@@ -101,15 +101,15 @@ function App() {
                     <p>Taxis: Uber, Lyft</p>
                     <p></p>
                   </div>
-                  <iframe
-                    title="fazeleyStudios"
-                    width="600"
-                    height="450"
-                    className="border-0"
-                    loading="lazy"
-                    allowfullscreen
-                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"
-                  ></iframe>
+                  <div className="max-w-screen">
+                    <iframe
+                      title="fazeleyStudios"
+                      className="max-w-screen"
+                      loading="lazy"
+                      allowfullscreen
+                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"
+                    ></iframe>
+                  </div>
                 </div>
               )}
               {index === 3 && (
