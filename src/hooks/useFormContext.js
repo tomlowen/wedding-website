@@ -3,8 +3,12 @@ import React, { useState, useContext, createContext, useEffect } from "react";
 const FormContext = createContext();
 
 export function FormProvider({ children }) {
+  //save url paramater as a variable
   const partyUuid = window.location.search.slice(6);
 
+  const [formData, setFormData] = useState([]);
+
+  // set form data to equal what is returned from the API . Calls Api on page load
   useEffect(() => {
     async function getInitialFormData() {
       try {
@@ -21,8 +25,6 @@ export function FormProvider({ children }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const [formData, setFormData] = useState([]);
-
   function updateForm(inputName, eventValue, guestUuid) {
     const newFormData = formData.map((guest) => {
       if (guest.uuid === guestUuid || guestUuid === "Apply_to_all") {
@@ -34,8 +36,25 @@ export function FormProvider({ children }) {
   }
 
   function handleFormSubmit(payload) {
-    console.log(payload);
     // send form data to database
+    console.log(payload);
+    payload.forEach(async (person) => {
+      console.log(person.uuid);
+      try {
+        const res = await fetch(
+          `https://lowen-wedding-db.herokuapp.com/guests/${person.uuid}`,
+          {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(person),
+          }
+        );
+        console.log(res);
+      } catch (error) {
+        console.error(error);
+      }
+    });
+
     // load thank you message
   }
 
