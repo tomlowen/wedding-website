@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* div {
+div {
   border-style: solid;
   border-color: black;
   border-width: 1px;
-} */
+}
