@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function NavBar({ content }) {
+function NavBar({ paraTitles }) {
   const [navBarVisible, setNavBarVisible] = useState(false);
 
   const variants = {
@@ -52,10 +52,10 @@ function NavBar({ content }) {
             </div>
           </div>
           <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-            {content.map((section) => (
+            {paraTitles.map((title) => (
               <li>
-                <HashLink smooth to={`/#${section.title}`} className="navLink">
-                  {section.title}
+                <HashLink smooth to={`/#${title}`} className="navLink">
+                  {title}
                 </HashLink>
               </li>
             ))}
@@ -70,10 +70,10 @@ function NavBar({ content }) {
       >
         <div className="px-5 xl:px-12 py-10">
           <ul className="flex-col px-4 font-semibold font-heading space-y-5">
-            {content.map((section) => (
+            {paraTitles.map((title) => (
               <li>
-                <HashLink smooth to={`/#${section.title}`} className="py-5">
-                  {section.title}
+                <HashLink smooth to={`/#${title}`} className="py-5">
+                  {title}
                 </HashLink>
               </li>
             ))}
