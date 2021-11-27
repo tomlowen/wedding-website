@@ -11,7 +11,7 @@ export const Form = () => {
     <div id="rsvp" className="flex-col flex items-center font-bookman">
       <h2 className="text-5xl pb-20 pt-20 self-center text-2xl ">RSVP</h2>
       {formData[0] && (
-        <div className="max-w-lg border-gray-300 shadow-xs m-4 p-3 box-content border-2 rounded-xl flex-col flex items-center">
+        <form className="max-w-lg border-gray-300 shadow-xs m-4 p-3 box-content border-2 rounded-xl flex-col flex items-center">
           {formData.map((guest, i) => {
             return <GuestSection guest={guest} key={i} />;
           })}
@@ -37,7 +37,7 @@ export const Form = () => {
             }
           />
           <Button />
-        </div>
+        </form>
       )}
     </div>
   );

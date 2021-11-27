@@ -61,7 +61,7 @@ function App() {
                 <div
                   className={`${alternateSectionStyling(
                     index
-                  )} md:flex justify-between content-align`}
+                  )} md:flex justify-between`}
                 >
                   <div className="md:w-2/3">
                     <h3 className={`text-5xl pb-20`}>{title}</h3>
@@ -107,6 +107,7 @@ function App() {
                       </tr>
                     </table>
                   </div>
+
                   <div className="md:w-1/3 flex justify-center">
                     <img
                       src={fazeley}
