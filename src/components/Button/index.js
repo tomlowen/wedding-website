@@ -9,6 +9,7 @@ function Button() {
       onClick={() => handleFormSubmit(formData)}
     >
       RSVP!
+      submit
     </button>
   );
 }
