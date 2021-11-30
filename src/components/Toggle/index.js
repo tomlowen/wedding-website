@@ -9,20 +9,33 @@ export default function Toggle({ value, guestUuid }) {
   const [selected, setSelected] = useState(value);
 
   return (
-    <div>
-      <ToggleButton
-        sx={{ px: 2, height: "100%" }}
-        value="check"
-        selected={selected}
-        color="success"
-        onChange={(e) => {
-          updateForm("attending", !selected, guestUuid);
-          setSelected(!selected);
-        }}
-      >
-        {/* {selected == true && <TickIcon />} */}
-        {/* {selected == false && <CrossIcon />} */}
-      </ToggleButton>
+    <div className="flex-row flex items-center">
+      <div className="p-2">
+        <ToggleButton
+          sx={{ px: 2, height: "100%" }}
+          selected={selected === false}
+          color="error"
+          onChange={() => {
+            updateForm("attending", false, guestUuid);
+            setSelected(false);
+          }}
+        >
+          <CrossIcon />
+        </ToggleButton>
+      </div>
+      <div className="p-2">
+        <ToggleButton
+          sx={{ px: 2, height: "100%" }}
+          selected={selected}
+          color="success"
+          onChange={() => {
+            updateForm("attending", true, guestUuid);
+            setSelected(true);
+          }}
+        >
+          <TickIcon />
+        </ToggleButton>
+      </div>
     </div>
   );
 }

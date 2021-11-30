@@ -1,16 +1,12 @@
-import { useState } from "react";
 import Input from "../Input";
 import Toggle from "../Toggle";
 
 function GuestSection(guest) {
   const { name, diet, uuid, attending } = guest.guest;
-
-  const [dietInputDisplay, setDietInputDisplay] = useState(false);
-
   return (
     <>
       <div className="">
-        <div className={"flex-row flex items-center pt-5"}>
+        <div className={"flex-row flex items-center pt-3"}>
           <Input
             placeholder="Who are you?"
             labelText="Name"

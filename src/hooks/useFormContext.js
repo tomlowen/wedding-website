@@ -2,8 +2,8 @@ import React, { useState, useContext, createContext, useEffect } from "react";
 
 const FormContext = createContext();
 
-// const url = "https://lowen-wedding-db.herokuapp.com"
-const url = "http://localhost:3000"
+const url = "https://lowen-wedding-db.herokuapp.com"
+// const url = "http://localhost:3000"
 
 export function FormProvider({ children }) {
   //save url paramater as a variable

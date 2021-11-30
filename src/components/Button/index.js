@@ -1,17 +1,25 @@
 import React from "react";
+import Button from "@mui/material/Button";
 import { useFormContext } from "../../hooks/useFormContext";
 
-function Button() {
+function SubmitButton() {
   const { formData, handleFormSubmit } = useFormContext();
+  const allGuestsRSVP =
+    formData.filter((attendance) => attendance.attending !== null).length ===
+    formData.length
+      ? true
+      : false;
   return (
-    <button
-      className="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    <Button
       onClick={() => handleFormSubmit(formData)}
+      color="secondary"
+      variant="contained"
+      size="large"
+      disabled={allGuestsRSVP ? false : true}
     >
       RSVP!
-      submit
-    </button>
+    </Button>
   );
 }
 
-export default Button;
+export default SubmitButton;

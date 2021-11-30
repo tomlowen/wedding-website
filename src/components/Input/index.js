@@ -6,7 +6,7 @@ import React from "react";
 const Input = ({ inputName, placeholder, labelText, value, guestUuid, size }) => {
   const { updateForm } = useFormContext();
   return (
-    <div>
+    <div className="px-4">
       <TextField
         autoComplete="off"
         id="standard-basic"
