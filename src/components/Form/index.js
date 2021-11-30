@@ -7,6 +7,7 @@ import EmailInput from "../EmailInput";
 
 export const Form = () => {
   const { formData } = useFormContext();
+  console.log(formData);
   return (
     <div id="rsvp" className="flex-col flex items-center font-bookman">
       <h2 className="text-5xl pb-20 pt-20 self-center text-2xl ">RSVP</h2>
