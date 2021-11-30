@@ -7,7 +7,6 @@ import EmailInput from "../EmailInput";
 
 export const Form = () => {
   const { formData } = useFormContext();
-  console.log(formData);
   return (
     <div id="rsvp" className="flex-col flex items-center font-bookman">
       <h2 className="text-5xl pb-20 pt-20 self-center text-2xl ">RSVP</h2>
@@ -17,15 +16,11 @@ export const Form = () => {
             return <GuestSection guest={guest} key={i} />;
           })}
           <EmailInput />
+
           <Input
-            type="text"
-            placeholder=""
-            labelText="Please tell us what you want to dance to"
+            labelText="Song requests"
             inputName={"songrequest"}
             guestUuid={"Apply_to_all"}
-            inputClass={
-              "bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-600"
-            }
           />
           <Button />
         </form>

@@ -1,32 +1,25 @@
 import { useFormContext } from "../../hooks/useFormContext";
 
-function Input({
-  inputName,
-  placeholder,
-  type,
-  labelText,
-  value,
-  guestUuid,
-  inputClass,
-}) {
+import { TextField } from "@mui/material";
+import React from "react";
+
+const Input = ({ inputName, placeholder, labelText, value, guestUuid, size }) => {
   const { updateForm } = useFormContext();
   return (
     <div>
-      <label>{labelText}</label>
-      <input
-        className={inputClass}
-        type={type}
+      <TextField
+        autoComplete="off"
+        id="standard-basic"
+        label={labelText}
         placeholder={placeholder}
-        onChange={(e) =>
-          updateForm(
-            inputName,
-            type === "checkbox" ? e.target.checked : e.target.value,
-            guestUuid
-          )
-        }
-        value={value}
+        onChange={(e) => updateForm(inputName, e.target.value, guestUuid)}
+        defaultValue={value}
+        variant="outlined"
+        size={size}
+        fullWidth
       />
     </div>
   );
-}
+};
+
 export default Input;

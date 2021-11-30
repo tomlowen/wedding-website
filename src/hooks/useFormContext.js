@@ -2,6 +2,9 @@ import React, { useState, useContext, createContext, useEffect } from "react";
 
 const FormContext = createContext();
 
+// const url = "https://lowen-wedding-db.herokuapp.com"
+const url = "http://localhost:3000"
+
 export function FormProvider({ children }) {
   //save url paramater as a variable
   const partyUuid = window.location.search.slice(6);
@@ -13,7 +16,7 @@ export function FormProvider({ children }) {
     async function getInitialFormData() {
       try {
         const res = await fetch(
-          `https://lowen-wedding-db.herokuapp.com/guests?uuid=${partyUuid}`
+          `${url}/guests?uuid=${partyUuid}`
         );
         const data = await res.json();
         setFormData(data.payload);
@@ -26,6 +29,7 @@ export function FormProvider({ children }) {
   }, []);
 
   function updateForm(inputName, eventValue, guestUuid) {
+    console.log(formData)
     const newFormData = formData.map((guest) => {
       if (guest.uuid === guestUuid || guestUuid === "Apply_to_all") {
         return { ...guest, [inputName]: eventValue };
@@ -37,9 +41,7 @@ export function FormProvider({ children }) {
 
   function handleFormSubmit(payload) {
     // send form data to database
-    console.log(payload);
     payload.forEach(async (person) => {
-      console.log(person.uuid);
       try {
         const res = await fetch(
           `https://lowen-wedding-db.herokuapp.com/guests/${person.uuid}`,
@@ -49,9 +51,7 @@ export function FormProvider({ children }) {
             body: JSON.stringify(person),
           }
         );
-        console.log(res);
       } catch (error) {
-        console.error(error);
       }
     });
 
