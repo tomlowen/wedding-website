@@ -33,9 +33,11 @@ export const Form = () => {
   return (
     <div id="rsvp" className="flex-col flex items-center font-bookman">
       <h2 className="text-5xl pb-10 pt-10 self-center text-2xl ">RSVP</h2>
-      <p className="text-lg pb-10 pt-10 self-center text-2xl text-red-600">
-        You have already responded, but feel free to update your RSVP below
-      </p>
+      {formData[0].responded && (
+        <p className="text-lg pb-10 pt-10 self-center text-2xl text-red-600">
+          You have already responded, but feel free to update your RSVP below
+        </p>
+      )}
       {formData[0] && (
         <form className="max-w-lg border-gray-300 shadow-xs m-4 p-3 mb-10 box-content border-2 rounded-xl flex-col flex items-center">
           {formData.map((guest, i) => {
