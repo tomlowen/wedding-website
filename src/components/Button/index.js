@@ -2,16 +2,22 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { useFormContext } from "../../hooks/useFormContext";
 
-function SubmitButton() {
+function SubmitButton({ setOpen }) {
   const { formData, handleFormSubmit } = useFormContext();
   const allGuestsRSVP =
     formData.filter((attendance) => attendance.attending !== null).length ===
     formData.length
       ? true
       : false;
+
+  function handleClick(formData) {
+    setOpen(true);
+    handleFormSubmit(formData);
+  }
+
   return (
     <Button
-      onClick={() => handleFormSubmit(formData)}
+      onClick={() => handleClick(formData)}
       color="secondary"
       variant="contained"
       size="large"
