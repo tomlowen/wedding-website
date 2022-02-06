@@ -21,7 +21,7 @@ export const Form = () => {
     p: 4,
   };
 
-  const { formData, loading } = useFormContext();
+  const { formData, loading, hasResponded, partyUuid } = useFormContext();
   const anyoneAttending =
     formData.filter((attendance) => attendance.attending).length > 0
       ? true
@@ -29,17 +29,21 @@ export const Form = () => {
 
   const [open, setOpen] = React.useState(false);
   const handleClose = () => setOpen(false);
-
   return (
-    <div id="rsvp" className="flex-col flex items-center font-bookman">
-      <h2 className="text-5xl pb-10 pt-10 self-center text-2xl ">RSVP</h2>
-      {formData[0].responded && (
+    <div id="rsvp" className="flex-col flex items-center font-sans">
+      {partyUuid.length === 36 && (<h2 className="text-5xl pb-10 pt-10 self-center text-2xl ">RSVP</h2>)}
+      {partyUuid.length !== 36 && (
+        <h3 className="text-2xl pb-10 pt-10 self-center text-2xl ">
+          You need to use the link sent in your email to RSVP
+        </h3>
+      )}
+      {hasResponded && (
         <p className="text-lg pb-10 pt-10 self-center text-2xl text-red-600">
           You have already responded, but feel free to update your RSVP below
         </p>
       )}
       {formData[0] && (
-        <form className="max-w-lg border-gray-300 shadow-xs m-4 p-3 mb-10 box-content border-2 rounded-xl flex-col flex items-center">
+        <form className="font-sans max-w-lg border-gray-300 shadow-xs m-4 p-3 mb-10 box-content border-2 rounded-xl flex-col flex items-center">
           {formData.map((guest, i) => {
             return <GuestSection guest={guest} key={i} />;
           })}
@@ -73,10 +77,9 @@ export const Form = () => {
           </Modal>
         </form>
       )}
-      <p className="pb-4">
-        This site was built by Tom. He reserves the right to message you asking
-        for your response again via a more reliable method should this site fall
-        over and die.
+      <p className="pb-4 font-sans">
+        This site was built by Tom. Please direct all errors and complaints to
+        Frankie.
       </p>
     </div>
   );

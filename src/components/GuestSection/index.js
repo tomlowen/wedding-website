@@ -6,7 +6,7 @@ function GuestSection(guest) {
   return (
     <>
       <div className="">
-        <div className={"flex-row flex items-center pt-3"}>
+        <div className={"flex-row flex items-center pt-3 font-sans"}>
           <Input
             placeholder="Who are you?"
             labelText="Name"
@@ -17,7 +17,7 @@ function GuestSection(guest) {
           />
           <Toggle inputClass={"checkbox"} value={attending} guestUuid={uuid} />
         </div>
-        <div className="pt-2 pb-5">
+        <div className="pt-2 pb-5 font-sans">
           {attending && (
             <div className="dietaryRequirements">
               <Input

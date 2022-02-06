@@ -24,7 +24,7 @@ export function ControlledCarousel() {
       <div className="h-screen max-w-screen flex place-items-center p-5 ">
         <div className="flex max-w-3xl z-20 font-bookman text-7xl font-bold text-center text-pink-700 transform translate-y-12">
           <motion.p
-            className="max-w-screen"
+            className="max-w-screen font-sans"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 1.5, delay: 2.7 }}
@@ -32,7 +32,7 @@ export function ControlledCarousel() {
             After 12 years...
           </motion.p>
           <motion.p
-            className="absolute max-w-screen"
+            className="absolute max-w-screen font-sans"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 3.7 }}
