@@ -7,6 +7,7 @@ const url = "https://lowen-wedding-db.herokuapp.com";
 
 export function FormProvider({ children }) {
   //save url paramater as a variable
+  // eslint-disable-next-line no-unused-vars
   const [partyUuid, setPartyUuid] = useState(window.location.search.slice(6));
   const [formData, setFormData] = useState([]);
   const [loading, setLoading] = useState(false);
