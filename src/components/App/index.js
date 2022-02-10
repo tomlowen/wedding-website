@@ -150,6 +150,7 @@ function App() {
                       to see if you will be charged and see coverage of the
                       Clean Air Zone.
                     </p>
+                    <h2 className="text-2xl pt-10 pb-2">Parking</h2>
                     <p className="font-sans">
                       If you do choose to drive here, there is limited on street
                       parking near the venue (RingGo), or some car parks a short
@@ -160,25 +161,7 @@ function App() {
                       Oxford St, B5 6DY <br></br>
                       <br></br>Gallan Parking Ltd, Bordesley Street, B5 5BL
                     </p>
-                  </div>
-                  <iframe
-                    title="fazeleyStudios"
-                    className="w-full md:w-1/2 mt-10 pt-10 md:h-500"
-                    loading="lazy"
-                    allowfullscreen
-                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"
-                  ></iframe>
-                </div>
-              )}
-              {index === 3 && (
-                <div
-                  className={`${alternateSectionStyling(
-                    index
-                  )} md:flex justify-between`}
-                >
-                  <div className="md:w-2/3 text-xl font-sans">
-                    <h3 className={`text-5xl pb-20`}>{title}</h3>
-                    <h2 className="text-2xl">Taxis</h2>
+                    <h2 className="text-2xl pt-10 pb-2">Taxis</h2>
                     <p className="pb-2 font-sans">
                       Uber operates in Brum, although it will be busy by the
                       time the music stops. Here are some local taxi services if
@@ -221,7 +204,26 @@ function App() {
                         </a>
                       </p>
                     </p>
-                    <h2 className="text-2xl pt-10">Accomodation</h2>
+                  </div>
+                  <iframe
+                    title="fazeleyStudios"
+                    className="w-full md:w-1/2 mt-10 pt-10"
+                    style={{ height: "75vh" }}
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"
+                  ></iframe>
+                </div>
+              )}
+              {index === 3 && (
+                <div
+                  className={`${alternateSectionStyling(
+                    index
+                  )} md:flex justify-between`}
+                >
+                  <div className="md:w-2/3 text-xl font-sans">
+                    <h3 className={`text-5xl pb-20`}>{title}</h3>
+                    <h2 className="text-2xl">Accomodation</h2>
                     <p className="pt-2 pb-2 font-sans">
                       There is plenty of accomodation in and around the city,
                       but we would advise that you book a place to stay ASAP as
@@ -254,6 +256,10 @@ function App() {
                     >
                       Woodland House
                     </a>{" "}
+                    <p className="pt-2 pb-2 font-sans">
+                      Please make any cards out to Tom Lowen and Frankie
+                      Sheppard!
+                    </p>
                     <h2 className="text-2xl pt-10">Dress code</h2>
                     <p className="font-sans">
                       Wear whatever you feel comfortable in on the day! After
