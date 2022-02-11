@@ -125,13 +125,15 @@ function App() {
                 >
                   <div className="md:w-1/2 text-xl md:pr-10">
                     <h3 className={`text-5xl pb-20`}>{title}</h3>
-                    <p className="pb-2 font-sans">
-                      The address of the venue is:
-                    </p>
-                    <p className="font-sans">191 Fazeley Street</p>
+                    <p className="pb-2 font-sans">The address is:</p>
+                    <p className="font-sans">Fazeley Studios</p>
                     <p className="font-sans">Digbeth</p>
                     <p className="font-sans">Birmingham</p>
                     <p className="pb-4 font-sans">B5 5SE</p>
+                    <p className="pb-2 font-sans">
+                      Entry is through 'The Social at Fazeley' on Floodgate
+                      Street.
+                    </p>
                     <p className="pb-4 font-sans">
                       The venue is within Birmingham's{" "}
                       <a
@@ -211,7 +213,7 @@ function App() {
                     style={{ height: "75vh" }}
                     loading="lazy"
                     allowfullscreen
-                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyBC2L0Pk9uND-SiJHLnR3O-i5YNGOb74cY"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOX7hx4G8cEgRBU7Ph5E3ssU&key=AIzaSyChytbiNTqO0S6j1K5-VBMB3fYEAvHgA_M"
                   ></iframe>
                 </div>
               )}
