@@ -6,9 +6,6 @@ const url = "https://lowen-wedding-db.herokuapp.com";
 // const url = "http://localhost:3000";
 
 export function FormProvider({ children }) {
-  //save url paramater as a variable
-  // eslint-disable-next-line no-unused-vars
-  const [partyUuid, setPartyUuid] = useState(window.location.search.slice(6));
   const [formData, setFormData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [hasResponded, setHasResponded] = useState(false);
@@ -17,6 +14,7 @@ export function FormProvider({ children }) {
   useEffect(() => {
     async function getInitialFormData() {
       try {
+        let partyUuid = sessionStorage.getItem("partyUuid");
         const res = await fetch(`${url}/guests?uuid=${partyUuid}`);
         const data = await res.json();
         setFormData(data.payload);
@@ -24,6 +22,9 @@ export function FormProvider({ children }) {
       } catch (error) {
         console.error(error);
       }
+    }
+    if (sessionStorage.getItem("partyUuid").length !== 36) {
+      sessionStorage.setItem("partyUuid", window.location.search.slice(6));
     }
     getInitialFormData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -66,7 +67,6 @@ export function FormProvider({ children }) {
         loading,
         setLoading,
         hasResponded,
-        partyUuid,
       }}
     >
       {children}

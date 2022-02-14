@@ -21,7 +21,7 @@ export const Form = () => {
     p: 4,
   };
 
-  const { formData, loading, hasResponded, partyUuid } = useFormContext();
+  const { formData, loading, hasResponded } = useFormContext();
   const anyoneAttending =
     formData.filter((attendance) => attendance.attending).length > 0
       ? true
@@ -29,6 +29,8 @@ export const Form = () => {
 
   const [open, setOpen] = React.useState(false);
   const handleClose = () => setOpen(false);
+  const partyUuid = sessionStorage.getItem('partyUuid');
+  
   return (
     <div id="rsvp" className="flex-col flex items-center font-sans">
       {partyUuid.length === 36 && (<h2 className="text-5xl pb-10 pt-10 self-center text-2xl ">RSVP</h2>)}

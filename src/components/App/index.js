@@ -64,46 +64,54 @@ function App() {
                   )} md:flex justify-between`}
                 >
                   <div className="md:w-2/3">
-                    <h3 className={`text-5xl pb-20`}>{title}</h3>
+                    <h3 className={`text-5xl pb-10`}>{title}</h3>
                     <table className="text-xl pb-5">
-                      <tr>
+                      <tr className="pb-3">
                         <td
-                          className="pr-3 table-cell font-semibold"
+                          className="pr-3 pb-3 table-cell font-semibold"
                           valign="top"
                         >
                           3pm
                         </td>
-                        <td>
-                          Kick off! Drinks, ceremony, and a chance to explore
-                          Digbeth (if the weather's nice)
+                        <td className="pr-3 pb-3">
+                          Kick off! Doors open with drinks on arrival
                         </td>
                       </tr>
                       <tr>
                         <td
-                          className="pr-3 table-cell font-semibold"
+                          className="pr-3 pb-3 table-cell font-semibold pb-3"
+                          valign="top"
+                        >
+                          4pm
+                        </td>
+                        <td className="pr-3 pb-3">Ceremony</td>
+                      </tr>
+                      <tr>
+                        <td
+                          className="pr-3 pb-3 table-cell font-semibold"
                           valign="top"
                         >
                           6pm
                         </td>
-                        <td>We eat!</td>
+                        <td className="pr-3 pb-3">We eat!</td>
                       </tr>
                       <tr>
                         <td
-                          className="pr-3 table-cell font-semibold"
+                          className="pr-3 pb-3 table-cell font-semibold"
                           valign="top"
                         >
                           9pm
                         </td>
-                        <td>We dance!</td>
+                        <td className="pr-3 pb-3">We dance!</td>
                       </tr>
                       <tr>
                         <td
-                          className="pr-3 table-cell font-semibold"
+                          className="pr-3 pb-3 table-cell font-semibold"
                           valign="top"
                         >
                           1am
                         </td>
-                        <td>End of the night</td>
+                        <td className="pr-3 pb-3">Music stops</td>
                       </tr>
                     </table>
                   </div>
@@ -131,8 +139,7 @@ function App() {
                     <p className="font-sans">Birmingham</p>
                     <p className="pb-4 font-sans">B5 5SE</p>
                     <p className="pb-2 font-sans">
-                      Entry is through 'The Social at Fazeley' on Floodgate
-                      Street.
+                      Entry is at 'The Social at Fazeley' on Floodgate Street.
                     </p>
                     <p className="pb-4 font-sans">
                       The venue is within Birmingham's{" "}
@@ -154,9 +161,10 @@ function App() {
                     </p>
                     <h2 className="text-2xl pt-10 pb-2">Parking</h2>
                     <p className="font-sans">
-                      If you do choose to drive here, there is limited on street
-                      parking near the venue (RingGo), or some car parks a short
-                      walk away:<br></br>
+                      If you do choose to drive here, there are two options.
+                      Limited on street parking near the venue (free after 6pm),
+                      or some car parks a short walk away:
+                      <br></br>
                       <br></br>Trinity Street Car Park, Heathmill Lane, B9 4AL
                       <br></br>
                       <br></br>Green Parking Ltd. Digbeth Public Car Park,
@@ -165,8 +173,8 @@ function App() {
                     </p>
                     <h2 className="text-2xl pt-10 pb-2">Taxis</h2>
                     <p className="pb-2 font-sans">
-                      Uber operates in Brum, although it will be busy by the
-                      time the music stops. Here are some local taxi services if
+                      Uber and Ola operate in Birmingham, although it will be
+                      busy late evening. Here are some local taxi services if
                       you'd prefer to pre-book:
                       <br></br>
                       <p className="pt-2">
@@ -229,8 +237,8 @@ function App() {
                     <p className="pt-2 pb-2 font-sans">
                       There is plenty of accomodation in and around the city,
                       but we would advise that you book a place to stay ASAP as
-                      the wedding is shortly before the Commonwealth Games which
-                      takes place in Birmingham.
+                      the wedding is shortly before the Commonwealth Games,
+                      which is taking place in Birmingham.
                     </p>
                     <h2 className="text-2xl pt-10">Gifts</h2>
                     <p className="pt-2 pb-2 font-sans">
@@ -258,17 +266,18 @@ function App() {
                     >
                       Woodland House
                     </a>{" "}
-                    <p className="pt-2 pb-2 font-sans">
-                      Please make any cards out to Tom Lowen and Frankie
-                      Sheppard!
-                    </p>
                     <h2 className="text-2xl pt-10">Dress code</h2>
-                    <p className="font-sans">
-                      Wear whatever you feel comfortable in on the day! After
-                      the ceremony, there will be the option to explore the
-                      immediate area surrounding the venue; hence, you will be
-                      on your feet. Please wear footwear you'll be comfortable
-                      in!
+                    <p className="pt-2 font-sans">
+                      Please wear whatever feels comfortable. After the
+                      ceremony, there will be the option to explore the
+                      immediate area on foot if the weather is kind. Please
+                      bring footwear you'll be comfortable in!
+                    </p>
+                    <h2 className="text-2xl pt-10">Children</h2>
+                    <p className="pt-2  font-sans">
+                      No children please (as much as we love them all!)The only
+                      children attending are our nieces and nephews, and
+                      newborns.
                     </p>
                   </div>
                   <div className="md:w-1/3 flex justify-center font-sans">

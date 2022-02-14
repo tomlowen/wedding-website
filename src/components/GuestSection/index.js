@@ -8,7 +8,7 @@ function GuestSection(guest) {
       <div className="">
         <div className={"flex-row flex items-center pt-3 font-sans"}>
           <Input
-            placeholder="Who are you?"
+            placeholder="Name"
             labelText="Name"
             inputName={"name"}
             value={name}

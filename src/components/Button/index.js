@@ -10,6 +10,8 @@ function SubmitButton({ setOpen }) {
       ? true
       : false;
 
+  const allNamesEntered = formData.every((guest) => guest.name);
+
   function handleClick(formData) {
     setOpen(true);
     handleFormSubmit(formData);
@@ -21,7 +23,7 @@ function SubmitButton({ setOpen }) {
       color="secondary"
       variant="contained"
       size="large"
-      disabled={allGuestsRSVP ? false : true}
+      disabled={allGuestsRSVP && allNamesEntered ? false : true}
     >
       RSVP!
     </Button>
