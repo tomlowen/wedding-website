@@ -23,7 +23,10 @@ export function FormProvider({ children }) {
         console.error(error);
       }
     }
-    if (sessionStorage.getItem("partyUuid").length !== 36) {
+    if (
+      sessionStorage.getItem("partyUuid") === null ||
+      sessionStorage.getItem("partyUuid").length !== 36
+    ) {
       sessionStorage.setItem("partyUuid", window.location.search.slice(6));
     }
     getInitialFormData();

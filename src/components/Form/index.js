@@ -29,11 +29,13 @@ export const Form = () => {
 
   const [open, setOpen] = React.useState(false);
   const handleClose = () => setOpen(false);
-  const partyUuid = sessionStorage.getItem('partyUuid');
-  
+  const partyUuid = sessionStorage.getItem("partyUuid") || "No party UUID";
+
   return (
     <div id="rsvp" className="flex-col flex items-center font-sans">
-      {partyUuid.length === 36 && (<h2 className="text-5xl pb-10 pt-10 self-center text-2xl ">RSVP</h2>)}
+      {partyUuid.length === 36 && (
+        <h2 className="text-5xl pb-10 pt-10 self-center text-2xl ">RSVP</h2>
+      )}
       {partyUuid.length !== 36 && (
         <h3 className="text-2xl pb-10 pt-10 self-center text-2xl ">
           You need to use the link sent in your email to RSVP
